@@ -155,7 +155,7 @@ class activedirectorysync
          $arr = array();
          $arr = $this->get_members();
 
-         $defaultpass = md5("123456");
+         $defaultpass = md5("secret#default&p@ss");
 		 fwrite($this->debugFile, print_r($arr,true) . "\r\n");
 
          foreach($arr as $user)
@@ -186,7 +186,7 @@ class activedirectorysync
 
             if (count($ruser) == 0)
             {
-				fwrite($this->debugFile, "Não existe! \r\n");
+				fwrite($this->debugFile, "NÃ£o existe! \r\n");
                 if ($displayname != "" && $login != "")
                 {
                     $arr[]['user'] = $login;
